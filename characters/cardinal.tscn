@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://hr5oa44hepe3"]
+
+[ext_resource type="PackedScene" uid="uid://b46aq3ygtbwo0" path="res://characters/character.tscn" id="1_v32m6"]
+
+[node name="Cardinal" unique_id=2006223497 instance=ExtResource("1_v32m6")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1635812063]
+region_rect = Rect2(51, 153, 15, 17)
+
+[node name="OnHover" type="AudioStreamPlayer2D" parent="." index="2" unique_id=473884965]

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://qbrnh0yfyvwx"]
+
+[ext_resource type="Texture2D" uid="uid://buehfgrd0ctf0" path="res://abilities/firestorm_area.png" id="1_iours"]
+[ext_resource type="Script" uid="uid://c0c2sx0iqiaeb" path="res://abilities/damage_effect.gd" id="2_m1ara"]
+[ext_resource type="PackedScene" uid="uid://c872yg5pgj3c8" path="res://abilities/fireball.tscn" id="2_ufomn"]
+[ext_resource type="Texture2D" uid="uid://g05fj6w3jee8" path="res://abilities/firestorm_range.png" id="3_ufomn"]
+[ext_resource type="Script" uid="uid://dikcdb061vg3x" path="res://abilities/ability.gd" id="4_vta5h"]
+
+[sub_resource type="Resource" id="Resource_gi81k"]
+script = ExtResource("2_m1ara")
+damage = 1
+animation_scene = ExtResource("2_ufomn")
+metadata/_custom_type_script = "uid://c0c2sx0iqiaeb"
+
+[resource]
+script = ExtResource("4_vta5h")
+name = "Firestorm"
+range = ExtResource("3_ufomn")
+area = ExtResource("1_iours")
+effect = SubResource("Resource_gi81k")
+metadata/_custom_type_script = "uid://dikcdb061vg3x"

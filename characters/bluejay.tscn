@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bod4t8r7pg2o7"]
+
+[ext_resource type="PackedScene" uid="uid://b46aq3ygtbwo0" path="res://characters/character.tscn" id="1_ql32u"]
+[ext_resource type="Script" uid="uid://dikcdb061vg3x" path="res://abilities/ability.gd" id="2_akoe8"]
+
+[sub_resource type="Resource" id="Resource_f0775"]
+script = ExtResource("2_akoe8")
+name = "Encore"
+metadata/_custom_type_script = "uid://dikcdb061vg3x"
+
+[sub_resource type="Resource" id="Resource_vliyq"]
+script = ExtResource("2_akoe8")
+name = "Recover"
+metadata/_custom_type_script = "uid://dikcdb061vg3x"
+
+[sub_resource type="Resource" id="Resource_qulg7"]
+script = ExtResource("2_akoe8")
+name = "Disable"
+metadata/_custom_type_script = "uid://dikcdb061vg3x"
+
+[node name="Bluejay" unique_id=2006223497 instance=ExtResource("1_ql32u")]
+abilities = Array[ExtResource("2_akoe8")]([SubResource("Resource_f0775"), SubResource("Resource_vliyq"), SubResource("Resource_qulg7")])

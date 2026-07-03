@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://b75sxoc4fygd5"]
+
+[ext_resource type="Texture2D" uid="uid://ctumgao2tryv1" path="res://abilities/movement_area.png" id="1_e8rbd"]
+[ext_resource type="Script" uid="uid://c4oi5vavfuf8k" path="res://abilities/movement_effect.gd" id="2_lctoi"]
+[ext_resource type="Texture2D" uid="uid://bnr7onqnkc5ys" path="res://abilities/flash_range.png" id="3_igdoa"]
+[ext_resource type="Script" uid="uid://dikcdb061vg3x" path="res://abilities/ability.gd" id="4_2bdes"]
+
+[sub_resource type="Resource" id="Resource_px0f0"]
+script = ExtResource("2_lctoi")
+metadata/_custom_type_script = "uid://c4oi5vavfuf8k"
+
+[resource]
+script = ExtResource("4_2bdes")
+name = "Flash"
+range = ExtResource("3_igdoa")
+area = ExtResource("1_e8rbd")
+effect = SubResource("Resource_px0f0")
+metadata/_custom_type_script = "uid://dikcdb061vg3x"

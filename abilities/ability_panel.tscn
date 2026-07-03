@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cjsyk51uhiwar"]
+
+[ext_resource type="Script" uid="uid://drikm2rbqa5" path="res://abilities/ability_panel.gd" id="1_rax7n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uqonq"]
+bg_color = Color(0.26668885, 0.5005065, 1, 1)
+
+[node name="AbilityPanel" type="PanelContainer" unique_id=570765639 groups=["ability"]]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_uqonq")
+script = ExtResource("1_rax7n")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1581849070]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1383901640]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1670046921]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Fireball"
+
+[node name="Description" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1721665787]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Damage 2
+Range 4
+Cardinal"
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

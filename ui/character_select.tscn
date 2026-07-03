@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://bw3so6qjcrb6a"]
+
+[ext_resource type="Texture2D" uid="uid://dn3303iy61fxb" path="res://icon.svg" id="1_v71u7"]
+[ext_resource type="PackedScene" uid="uid://cjsyk51uhiwar" path="res://abilities/ability_panel.tscn" id="2_fheba"]
+
+[node name="Control" type="PanelContainer" unique_id=113644900]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -266.5
+offset_top = -86.5
+offset_right = 266.5
+offset_bottom = 86.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1685659452]
+layout_mode = 2
+
+[node name="CharacterPanel" type="HBoxContainer" parent="VBoxContainer" unique_id=1630465278]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/CharacterPanel" unique_id=1084366368]
+layout_mode = 2
+texture = ExtResource("1_v71u7")
+
+[node name="Abilities" type="HBoxContainer" parent="VBoxContainer/CharacterPanel" unique_id=1619231871]
+layout_mode = 2
+
+[node name="Ability" parent="VBoxContainer/CharacterPanel/Abilities" unique_id=570765639 instance=ExtResource("2_fheba")]
+layout_mode = 2
+
+[node name="Ability2" parent="VBoxContainer/CharacterPanel/Abilities" unique_id=220117941 instance=ExtResource("2_fheba")]
+layout_mode = 2
+
+[node name="Ability3" parent="VBoxContainer/CharacterPanel/Abilities" unique_id=1620773997 instance=ExtResource("2_fheba")]
+layout_mode = 2
+
+[node name="CharacterPanel2" type="HBoxContainer" parent="VBoxContainer" unique_id=2073494963]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/CharacterPanel2" unique_id=2068008637]
+layout_mode = 2
+texture = ExtResource("1_v71u7")
+
+[node name="Abilities" type="HBoxContainer" parent="VBoxContainer/CharacterPanel2" unique_id=1546845738]
+layout_mode = 2
+
+[node name="Ability" parent="VBoxContainer/CharacterPanel2/Abilities" unique_id=656582003 instance=ExtResource("2_fheba")]
+layout_mode = 2
+
+[node name="Ability2" parent="VBoxContainer/CharacterPanel2/Abilities" unique_id=1791327394 instance=ExtResource("2_fheba")]
+layout_mode = 2
+
+[node name="Ability3" parent="VBoxContainer/CharacterPanel2/Abilities" unique_id=28999324 instance=ExtResource("2_fheba")]
+layout_mode = 2
+
+[node name="CharacterPanel3" type="HBoxContainer" parent="VBoxContainer" unique_id=192445582]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/CharacterPanel3" unique_id=908317999]
+layout_mode = 2
+texture = ExtResource("1_v71u7")
+
+[node name="Abilities" type="HBoxContainer" parent="VBoxContainer/CharacterPanel3" unique_id=181082879]
+layout_mode = 2
+
+[node name="Ability" parent="VBoxContainer/CharacterPanel3/Abilities" unique_id=1066204436 instance=ExtResource("2_fheba")]
+layout_mode = 2
+
+[node name="Ability2" parent="VBoxContainer/CharacterPanel3/Abilities" unique_id=1603780278 instance=ExtResource("2_fheba")]
+layout_mode = 2
+
+[node name="Ability3" parent="VBoxContainer/CharacterPanel3/Abilities" unique_id=912525909 instance=ExtResource("2_fheba")]
+layout_mode = 2

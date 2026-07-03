@@ -1,0 +1,22 @@
+1. Polish / Style:
+	a. better animations
+	b. spells start at the first tile on their path rather than on top of the character
+	c. sound effects
+
+2. Abilities:
+	b. Basic Healing
+	c. Basic Melee
+
+5. Game Design:
+	a. A Party has a collection of abilities. On your turn, you can play one ability.
+	   That ability is in the discard pile, and won't come back until you skip a turn
+	   aftere which you get all abilities back except one.
+	b. After your turn, the enemy takes a turn!
+
+6. Bird Types:
+	- Gray: chicklings, very basic abilities, choose 3 of 4
+	- Blue: bullies, multiple move and push abilities, low damage, choose 4 of 5
+	- White: support, nearly no damage, choose 4 of 5
+	- Red: ranged, AoE, choose 4 of 5
+	- Brown: high melee, move and attack, attack around, choose 4 of 5
+	- Black: rule-breakers, stun + additional ability, mass stun, move allies, choose 4 of 5

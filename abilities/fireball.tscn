@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://c872yg5pgj3c8"]
+
+[ext_resource type="Texture2D" uid="uid://kjywff4pa3ry" path="res://abilities/fireball.png" id="1_6atyw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_md3tj"]
+atlas = ExtResource("1_6atyw")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0ech"]
+atlas = ExtResource("1_6atyw")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cei40"]
+atlas = ExtResource("1_6atyw")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_astxq"]
+atlas = ExtResource("1_6atyw")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnlpm"]
+atlas = ExtResource("1_6atyw")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5lgc"]
+atlas = ExtResource("1_6atyw")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_86c08"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_md3tj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m0ech")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cei40")
+}],
+"loop": 0,
+"name": &"execute",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_astxq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xnlpm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5lgc")
+}],
+"loop": 1,
+"name": &"travel",
+"speed": 5.0
+}]
+
+[node name="Fireball" type="AnimatedSprite2D" unique_id=961399794]
+z_index = 1
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_86c08")
+animation = &"execute"

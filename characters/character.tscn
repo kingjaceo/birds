@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://b46aq3ygtbwo0"]
+
+[ext_resource type="Script" uid="uid://bv6e14xrvu3ix" path="res://characters/character.gd" id="1_3fwhk"]
+[ext_resource type="Texture2D" uid="uid://c703heyg3j4cy" path="res://level/tilemap.png" id="1_54qew"]
+[ext_resource type="Script" uid="uid://dikcdb061vg3x" path="res://abilities/ability.gd" id="2_f0775"]
+[ext_resource type="Resource" uid="uid://chw6mou7rnnia" path="res://abilities/fireball.tres" id="3_vliyq"]
+[ext_resource type="Resource" uid="uid://qbrnh0yfyvwx" path="res://abilities/firestorm.tres" id="4_qulg7"]
+[ext_resource type="Resource" uid="uid://b75sxoc4fygd5" path="res://abilities/flash.tres" id="5_ke030"]
+[ext_resource type="Texture2D" uid="uid://dn3303iy61fxb" path="res://icon.svg" id="7_jfi6v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3fwhk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86c08"]
+atlas = ExtResource("7_jfi6v")
+region = Rect2(0, 0, 384, 0)
+
+[node name="Character" type="Node2D" unique_id=2006223497]
+script = ExtResource("1_3fwhk")
+abilities = Array[ExtResource("2_f0775")]([ExtResource("3_vliyq"), ExtResource("4_qulg7"), ExtResource("5_ke030")])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1635812063]
+texture_filter = 1
+texture = ExtResource("1_54qew")
+region_enabled = true
+region_rect = Rect2(0, 119, 16, 17)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1159732589]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1374459099]
+shape = SubResource("CircleShape2D_3fwhk")
+
+[node name="Healthbar" type="TextureProgressBar" parent="." unique_id=1445065645]
+unique_name_in_owner = true
+modulate = Color(1, 0, 0.28627452, 0.5529412)
+texture_repeat = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.000004
+offset_top = 8.0
+offset_right = 372.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.063, 0.063)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+value = 40.0
+texture_progress = SubResource("AtlasTexture_86c08")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
