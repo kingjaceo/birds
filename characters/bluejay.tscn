@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b46aq3ygtbwo0" path="res://characters/character.tscn" id="1_ql32u"]
 [ext_resource type="Script" uid="uid://dikcdb061vg3x" path="res://abilities/ability.gd" id="2_akoe8"]
+[ext_resource type="Texture2D" uid="uid://defg0juxmiuq2" path="res://characters/icons/bluebird_icon.png" id="3_gi81k"]
 
 [sub_resource type="Resource" id="Resource_f0775"]
 script = ExtResource("2_akoe8")
@@ -20,3 +21,6 @@ metadata/_custom_type_script = "uid://dikcdb061vg3x"
 
 [node name="Bluejay" unique_id=2006223497 instance=ExtResource("1_ql32u")]
 abilities = Array[ExtResource("2_akoe8")]([SubResource("Resource_f0775"), SubResource("Resource_vliyq"), SubResource("Resource_qulg7")])
+
+[node name="Sprite2D" parent="." index="0" unique_id=1635812063]
+texture = ExtResource("3_gi81k")

@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b46aq3ygtbwo0" path="res://characters/character.tscn" id="1_cv18w"]
 [ext_resource type="Script" uid="uid://dikcdb061vg3x" path="res://abilities/ability.gd" id="2_nnf5y"]
+[ext_resource type="Texture2D" uid="uid://d10iotqa0t1jp" path="res://characters/icons/blackbird.png" id="3_kp53m"]
 
 [sub_resource type="Resource" id="Resource_ke030"]
 script = ExtResource("2_nnf5y")
@@ -14,8 +15,8 @@ name = "Crackle"
 metadata/_custom_type_script = "uid://dikcdb061vg3x"
 
 [node name="Blackbird" unique_id=2006223497 instance=ExtResource("1_cv18w")]
-health = 2
 abilities = Array[ExtResource("2_nnf5y")]([SubResource("Resource_ke030"), SubResource("Resource_jfi6v")])
 
 [node name="Sprite2D" parent="." index="0" unique_id=1635812063]
+texture = ExtResource("3_kp53m")
 region_rect = Rect2(0, 137, 16, 15)

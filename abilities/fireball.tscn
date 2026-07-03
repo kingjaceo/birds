@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://c872yg5pgj3c8"]
 
 [ext_resource type="Texture2D" uid="uid://kjywff4pa3ry" path="res://abilities/fireball.png" id="1_6atyw"]
+[ext_resource type="Script" uid="uid://bm3p1xx5mf2xc" path="res://abilities/effect_animation.gd" id="2_md3tj"]
+[ext_resource type="AudioStream" uid="uid://doy3duc0oo7wl" path="res://abilities/fire_crackle.wav" id="3_cei40"]
+[ext_resource type="AudioStream" uid="uid://dn20nslogsgc5" path="res://abilities/explosion_EvanBoyerman.wav" id="4_astxq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_md3tj"]
 atlas = ExtResource("1_6atyw")
@@ -38,7 +41,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cei40")
 }],
-"loop": 0,
+"loop": 1,
 "name": &"execute",
 "speed": 5.0
 }, {
@@ -62,3 +65,10 @@ z_index = 1
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_86c08")
 animation = &"execute"
+script = ExtResource("2_md3tj")
+
+[node name="Travel" type="AudioStreamPlayer" parent="." unique_id=701516903]
+stream = ExtResource("3_cei40")
+
+[node name="Execute" type="AudioStreamPlayer" parent="." unique_id=1092883926]
+stream = ExtResource("4_astxq")

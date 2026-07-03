@@ -17,6 +17,8 @@ signal ability_finished
 
 
 func select_ability(character: Character, ability: Ability):
+	$Range.clear()
+	$Area.clear()
 	current_state = State.AWAITING_INPUT
 	current_character = character
 	current_ability = ability

@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://b46aq3ygtbwo0"]
 
 [ext_resource type="Script" uid="uid://bv6e14xrvu3ix" path="res://characters/character.gd" id="1_3fwhk"]
-[ext_resource type="Texture2D" uid="uid://c703heyg3j4cy" path="res://level/tilemap.png" id="1_54qew"]
 [ext_resource type="Script" uid="uid://dikcdb061vg3x" path="res://abilities/ability.gd" id="2_f0775"]
 [ext_resource type="Resource" uid="uid://chw6mou7rnnia" path="res://abilities/fireball.tres" id="3_vliyq"]
 [ext_resource type="Resource" uid="uid://qbrnh0yfyvwx" path="res://abilities/firestorm.tres" id="4_qulg7"]
 [ext_resource type="Resource" uid="uid://b75sxoc4fygd5" path="res://abilities/flash.tres" id="5_ke030"]
+[ext_resource type="Texture2D" uid="uid://dw24515kdgb01" path="res://characters/icons/graybird.png" id="6_jfi6v"]
 [ext_resource type="Texture2D" uid="uid://dn3303iy61fxb" path="res://icon.svg" id="7_jfi6v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3fwhk"]
+radius = 9.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_86c08"]
 atlas = ExtResource("7_jfi6v")
@@ -20,8 +21,7 @@ abilities = Array[ExtResource("2_f0775")]([ExtResource("3_vliyq"), ExtResource("
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1635812063]
 texture_filter = 1
-texture = ExtResource("1_54qew")
-region_enabled = true
+texture = ExtResource("6_jfi6v")
 region_rect = Rect2(0, 119, 16, 17)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1159732589]

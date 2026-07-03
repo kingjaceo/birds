@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://kjywff4pa3ry" path="res://abilities/fireball.png" id="9_8cye3"]
 [ext_resource type="TileSet" uid="uid://bloat0ktwyaxo" path="res://level/ability_display.tres" id="9_i2t4f"]
 [ext_resource type="Script" uid="uid://pixi62vhavl1" path="res://abilities/abilities_container.gd" id="11_2orkt"]
+[ext_resource type="AudioStream" uid="uid://dhsgys88o16v5" path="res://level/level.wav" id="13_8b0r0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vonw3"]
 texture = ExtResource("1_u52ul")
@@ -399,12 +400,13 @@ unique_name_in_owner = true
 script = ExtResource("4_f2txt")
 
 [node name="Cardinal" parent="Characters" unique_id=2006223497 instance=ExtResource("6_i2t4f")]
+position = Vector2(54, -35)
 
 [node name="Blackbird" parent="Characters" unique_id=774932245 instance=ExtResource("7_8cye3")]
-position = Vector2(-88, -40)
+position = Vector2(-106, -10)
 
 [node name="Bluejay" parent="Characters" unique_id=852796249 instance=ExtResource("8_aicyk")]
-position = Vector2(-120, 56)
+position = Vector2(56, 51)
 
 [node name="AbilityManager" type="Node2D" parent="." unique_id=546495401]
 unique_name_in_owner = true
@@ -555,6 +557,10 @@ layout_mode = 2
 text = "undo"
 
 [node name="MainTrack" type="AudioStreamPlayer2D" parent="." unique_id=1663399166]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=714093239]
+stream = ExtResource("13_8b0r0")
+autoplay = true
 
 [connection signal="pressed" from="CanvasLayer/MainMenu/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="CanvasLayer/MainMenu/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

@@ -1,7 +1,7 @@
 class_name MovementEffect
 extends Effect
 
-var speed: float = 3.0 # tiles per second
+var speed: float = 6.0 # tiles per second
 
 
 func _do_apply():
@@ -14,7 +14,7 @@ func _do_apply():
 	var target_coord = _target_coords[0]
 	var target_position = Battlefield.get_position(target_coord)
 	var distance = target_coord.distance_to(_caster_coord)
-	var time = speed / distance
+	var time = distance / speed
 	_tween.tween_property(_caster, "global_position", target_position, time)
 
 

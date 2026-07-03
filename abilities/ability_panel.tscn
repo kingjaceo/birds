@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://cjsyk51uhiwar"]
 
 [ext_resource type="Script" uid="uid://drikm2rbqa5" path="res://abilities/ability_panel.gd" id="1_rax7n"]
+[ext_resource type="AudioStream" uid="uid://c8qrfpjmb6ihh" path="res://ui/panel_hover.ogg" id="2_aob4i"]
+[ext_resource type="AudioStream" uid="uid://cw2sjsm3wykjs" path="res://ui/panel_select.ogg" id="3_qpmrc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uqonq"]
 bg_color = Color(0.26668885, 0.5005065, 1, 1)
@@ -34,6 +36,12 @@ theme_override_font_sizes/font_size = 24
 text = "Damage 2
 Range 4
 Cardinal"
+
+[node name="OnHover" type="AudioStreamPlayer" parent="." unique_id=1058482439]
+stream = ExtResource("2_aob4i")
+
+[node name="OnSelect" type="AudioStreamPlayer" parent="." unique_id=74887442]
+stream = ExtResource("3_qpmrc")
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
