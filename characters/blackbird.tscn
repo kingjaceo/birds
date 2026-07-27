@@ -2,20 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://b46aq3ygtbwo0" path="res://characters/character.tscn" id="1_cv18w"]
 [ext_resource type="Script" uid="uid://dikcdb061vg3x" path="res://abilities/ability.gd" id="2_nnf5y"]
+[ext_resource type="Resource" uid="uid://bfucj2qycm74q" path="res://abilities/dart.tres" id="3_dtp2h"]
 [ext_resource type="Texture2D" uid="uid://d10iotqa0t1jp" path="res://characters/icons/blackbird.png" id="3_kp53m"]
-
-[sub_resource type="Resource" id="Resource_ke030"]
-script = ExtResource("2_nnf5y")
-name = "Dart"
-metadata/_custom_type_script = "uid://dikcdb061vg3x"
-
-[sub_resource type="Resource" id="Resource_jfi6v"]
-script = ExtResource("2_nnf5y")
-name = "Crackle"
-metadata/_custom_type_script = "uid://dikcdb061vg3x"
+[ext_resource type="Resource" uid="uid://bpfgfyjqsksvd" path="res://abilities/crackle.tres" id="4_8ae7w"]
 
 [node name="Blackbird" unique_id=2006223497 instance=ExtResource("1_cv18w")]
-abilities = Array[ExtResource("2_nnf5y")]([SubResource("Resource_ke030"), SubResource("Resource_jfi6v")])
+max_health = 6
+abilities = Array[ExtResource("2_nnf5y")]([ExtResource("3_dtp2h"), ExtResource("4_8ae7w")])
 
 [node name="Sprite2D" parent="." index="0" unique_id=1635812063]
 texture = ExtResource("3_kp53m")

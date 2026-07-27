@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://lcno850fwnst"]
+
+[ext_resource type="Script" uid="uid://cly2gkqsqgmli" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://fjikf1c1m8pw" path="res://characters/character_sprite.tscn" id="1_ig7tw"]
+
+[sub_resource type="Gradient" id="Gradient_7dm0k"]
+colors = PackedColorArray(0.50980395, 0.16470589, 0.18431373, 1, 0.35686275, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_35eui"]
+gradient = SubResource("Gradient_7dm0k")
+use_hdr = true
+
+[node name="Main" type="Node2D" unique_id=758617720]
+script = ExtResource("1_0xm2m")
+
+[node name="MainMenu" type="CanvasLayer" parent="." unique_id=612250928]
+unique_name_in_owner = true
+
+[node name="TextureRect" type="TextureRect" parent="MainMenu" unique_id=1485617512]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_35eui")
+
+[node name="CharacterSprite" parent="MainMenu" unique_id=1136409777 instance=ExtResource("1_ig7tw")]
+position = Vector2(323, 1390)
+
+[node name="PanelContainer" type="PanelContainer" parent="MainMenu" unique_id=1564414205]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 592.5
+offset_top = 157.0
+offset_right = 719.5
+offset_bottom = 355.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MainMenu/PanelContainer" unique_id=4601348]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/PanelContainer/MarginContainer" unique_id=1823472095]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MainMenu/PanelContainer/MarginContainer/VBoxContainer" unique_id=877252224]
+layout_mode = 2
+theme_override_font_sizes/font_size = 44
+text = "birds (the game)"
+
+[node name="Quickplay" type="Button" parent="MainMenu/PanelContainer/MarginContainer/VBoxContainer" unique_id=1432423742]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "play now!"
+
+[node name="DraftAndPlay" type="Button" parent="MainMenu/PanelContainer/MarginContainer/VBoxContainer" unique_id=1485607221]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "draft and play"
+
+[node name="Button3" type="Button" parent="MainMenu/PanelContainer/MarginContainer/VBoxContainer" unique_id=1054194572]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "main campaign"
+
+[node name="Button5" type="Button" parent="MainMenu/PanelContainer/MarginContainer/VBoxContainer" unique_id=191672733]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "options
+"
+
+[node name="Button4" type="Button" parent="MainMenu/PanelContainer/MarginContainer/VBoxContainer" unique_id=436020416]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "credits"
+
+[node name="Button6" type="Button" parent="MainMenu/PanelContainer/MarginContainer/VBoxContainer" unique_id=2080060510]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "quit"
+
+[connection signal="pressed" from="MainMenu/PanelContainer/MarginContainer/VBoxContainer/Quickplay" to="." method="_quickplay"]
+[connection signal="pressed" from="MainMenu/PanelContainer/MarginContainer/VBoxContainer/Button6" to="." method="_quit"]

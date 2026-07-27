@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://cmapx8alknvu8"]
+
+[ext_resource type="Script" uid="uid://dikcdb061vg3x" path="res://abilities/ability.gd" id="1_7ibnv"]
+
+[resource]
+script = ExtResource("1_7ibnv")
+name = "Flap"
+metadata/_custom_type_script = "uid://dikcdb061vg3x"

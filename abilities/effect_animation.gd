@@ -1,18 +1,18 @@
 class_name EffectAnimation
-extends AnimatedSprite2D
+extends Node2D
 
 
 signal finished
 
 
 func travel():
-	play("travel")
+	$AnimatedSprite2D.play("travel")
 	$Travel.play()
 
 func execute():
 	$Travel.stop()
 	await get_tree().create_timer(0.15).timeout
-	play("execute")
+	$AnimatedSprite2D.play("execute")
 	$Execute.play()
-	await get_tree().create_timer(2.5).timeout
+	await $AnimatedSprite2D.animation_finished
 	finished.emit()

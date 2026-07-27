@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://33qy6uswus24"]
+
+[ext_resource type="PackedScene" uid="uid://d4ix0q3yfyq1w" path="res://ui/popup_menus/popup_menu.tscn" id="1_b663j"]
+
+[node name="PopupMenu" unique_id=1744276896 instance=ExtResource("1_b663j")]
+
+[node name="Label" parent="VBoxContainer" parent_id_path=PackedInt32Array(857749805) index="0" unique_id=253613412]
+text = "you lose"
+
+[node name="Button1" parent="VBoxContainer" parent_id_path=PackedInt32Array(857749805) index="1" unique_id=437279879]
+text = "restart"

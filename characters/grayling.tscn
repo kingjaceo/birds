@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bjnxwv3wolkij"]
+
+[ext_resource type="PackedScene" uid="uid://b46aq3ygtbwo0" path="res://characters/character.tscn" id="1_j6v3n"]
+[ext_resource type="Script" uid="uid://dikcdb061vg3x" path="res://abilities/ability.gd" id="2_6xrsv"]
+[ext_resource type="Resource" uid="uid://dtaa8q4lnux1k" path="res://abilities/peck.tres" id="3_hx682"]
+[ext_resource type="Resource" uid="uid://cmapx8alknvu8" path="res://abilities/flap.tres" id="4_dsrcm"]
+
+[node name="Character" unique_id=2006223497 instance=ExtResource("1_j6v3n")]
+abilities = Array[ExtResource("2_6xrsv")]([ExtResource("3_hx682"), ExtResource("4_dsrcm")])

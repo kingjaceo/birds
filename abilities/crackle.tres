@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://bpfgfyjqsksvd"]
+
+[ext_resource type="Texture2D" uid="uid://b7bli3ixtw6rf" path="res://abilities/single_tile_area.png" id="1_syjv0"]
+[ext_resource type="Script" uid="uid://dikcdb061vg3x" path="res://abilities/ability.gd" id="1_tm3ik"]
+[ext_resource type="Script" uid="uid://c0c2sx0iqiaeb" path="res://abilities/damage_effect.gd" id="2_fibrn"]
+[ext_resource type="Texture2D" uid="uid://bfmyyln0mepb8" path="res://abilities/crackle.png" id="3_xqumg"]
+
+[sub_resource type="Resource" id="Resource_hncli"]
+script = ExtResource("2_fibrn")
+damage = 4
+reverse_speed = null
+metadata/_custom_type_script = "uid://c0c2sx0iqiaeb"
+
+[resource]
+script = ExtResource("1_tm3ik")
+name = "Crackle"
+icon = ExtResource("1_syjv0")
+range = ExtResource("3_xqumg")
+area = ExtResource("1_syjv0")
+effect = SubResource("Resource_hncli")
+metadata/_custom_type_script = "uid://dikcdb061vg3x"

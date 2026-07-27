@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://bfucj2qycm74q"]
+
+[ext_resource type="Texture2D" uid="uid://b7bli3ixtw6rf" path="res://abilities/single_tile_area.png" id="1_e81d0"]
+[ext_resource type="Script" uid="uid://dikcdb061vg3x" path="res://abilities/ability.gd" id="1_smhia"]
+[ext_resource type="Script" uid="uid://c4oi5vavfuf8k" path="res://abilities/movement_effect.gd" id="2_hxfgx"]
+[ext_resource type="Texture2D" uid="uid://dlbix6hjof4ax" path="res://abilities/dart_range.png" id="3_vtrtf"]
+
+[sub_resource type="Resource" id="Resource_7n0ti"]
+script = ExtResource("2_hxfgx")
+metadata/_custom_type_script = "uid://c4oi5vavfuf8k"
+
+[resource]
+script = ExtResource("1_smhia")
+name = "Dart"
+icon = ExtResource("3_vtrtf")
+range = ExtResource("3_vtrtf")
+area = ExtResource("1_e81d0")
+effect = SubResource("Resource_7n0ti")
+metadata/_custom_type_script = "uid://dikcdb061vg3x"

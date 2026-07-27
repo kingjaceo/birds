@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cqmdi6tg2xh7q" path="res://characters/icons/cardinal_icon.png" id="2_psfy4"]
 
 [node name="Cardinal" unique_id=2006223497 instance=ExtResource("1_v32m6")]
+max_health = 4
 
 [node name="Sprite2D" parent="." index="0" unique_id=1635812063]
 texture = ExtResource("2_psfy4")

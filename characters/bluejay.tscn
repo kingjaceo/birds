@@ -3,24 +3,13 @@
 [ext_resource type="PackedScene" uid="uid://b46aq3ygtbwo0" path="res://characters/character.tscn" id="1_ql32u"]
 [ext_resource type="Script" uid="uid://dikcdb061vg3x" path="res://abilities/ability.gd" id="2_akoe8"]
 [ext_resource type="Texture2D" uid="uid://defg0juxmiuq2" path="res://characters/icons/bluebird_icon.png" id="3_gi81k"]
-
-[sub_resource type="Resource" id="Resource_f0775"]
-script = ExtResource("2_akoe8")
-name = "Encore"
-metadata/_custom_type_script = "uid://dikcdb061vg3x"
-
-[sub_resource type="Resource" id="Resource_vliyq"]
-script = ExtResource("2_akoe8")
-name = "Recover"
-metadata/_custom_type_script = "uid://dikcdb061vg3x"
-
-[sub_resource type="Resource" id="Resource_qulg7"]
-script = ExtResource("2_akoe8")
-name = "Disable"
-metadata/_custom_type_script = "uid://dikcdb061vg3x"
+[ext_resource type="Resource" uid="uid://ci44oesf6di2s" path="res://abilities/encore.tres" id="3_srggp"]
+[ext_resource type="Resource" uid="uid://ctitv8daq4pw1" path="res://abilities/recover.tres" id="4_2nk0u"]
+[ext_resource type="Resource" uid="uid://b276cbx4p31a4" path="res://abilities/disable.tres" id="5_ewpks"]
 
 [node name="Bluejay" unique_id=2006223497 instance=ExtResource("1_ql32u")]
-abilities = Array[ExtResource("2_akoe8")]([SubResource("Resource_f0775"), SubResource("Resource_vliyq"), SubResource("Resource_qulg7")])
+max_health = 3
+abilities = Array[ExtResource("2_akoe8")]([ExtResource("3_srggp"), ExtResource("4_2nk0u"), ExtResource("5_ewpks")])
 
 [node name="Sprite2D" parent="." index="0" unique_id=1635812063]
 texture = ExtResource("3_gi81k")

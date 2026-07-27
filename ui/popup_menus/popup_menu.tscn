@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://d4ix0q3yfyq1w"]
+
+[ext_resource type="Script" uid="uid://ufar8ov5r55b" path="res://ui/popup_menus/popup_menu.gd" id="1_qxlc8"]
+
+[node name="PopupMenu" type="PanelContainer" unique_id=1744276896]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.0
+offset_top = -46.5
+offset_right = 38.0
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qxlc8")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1308866621]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=857749805]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=253613412]
+layout_mode = 2
+text = "pause"
+horizontal_alignment = 1
+
+[node name="Button1" type="Button" parent="MarginContainer/VBoxContainer" unique_id=437279879]
+layout_mode = 2
+text = "resume"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1688211127]
+layout_mode = 2
+text = "quit level"
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1778749085]
+layout_mode = 2
+text = "quit game"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button1" to="." method="_on_button1_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button2" to="." method="_on_button2_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button3" to="." method="_on_button3_pressed"]

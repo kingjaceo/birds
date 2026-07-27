@@ -1,6 +1,6 @@
 extends Node
 
-var _ground: TileMapLayer
+var _ground: MainLayer
 
 func set_tilemap(tilemap: TileMapLayer):
 	_ground = tilemap
@@ -17,3 +17,7 @@ func get_targets_at(coords: Array[Vector2i]) -> Array[Node2D]:
 
 func get_position(coord: Vector2i) -> Vector2:
 	return _ground.to_global(_ground.map_to_local(coord))
+
+
+func get_coord(_global_position: Vector2) -> Vector2i:
+	return _ground.local_to_map(_ground.to_local(_global_position))

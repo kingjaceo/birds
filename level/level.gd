@@ -1,24 +1,50 @@
+class_name Level
 extends Node2D
 
+var paused: bool = false
 
-# locks characters onto the tilemap
+signal quit_level_pressed
+signal quit_game_pressed
+signal restart_pressed
 
-# input state machine:
-#  - states: nothing_selected, character_selected, ability_selectedd
-#  - transitions:
-#     nothing -> character: click on character
-#     character -> nothing: right click anywhere
-#     character -> ability: click ability card
-#     ability -> character: right click anywhere
+
 func _ready():
-	#Engine.time_scale = 0.0
-	$MainTrack.play()
+	%MainTrack.play()
+	_setup()
 
 
-func _on_play_pressed() -> void:
-	Engine.time_scale = 1.0
-	%MainMenu.visible = false
+func _setup():
+	print("setting the level up!")
 
 
-func _on_quit_pressed() -> void:
-	get_tree().quit()
+func _input(event: InputEvent):
+	if event.is_action_pressed("pause") and paused:
+		_resume()
+	elif event.is_action_pressed("pause") and not paused:
+		_pause()
+
+
+func _quit_level() -> void:
+	quit_level_pressed.emit()
+
+
+func _quit_game() -> void:
+		get_tree().quit()
+
+
+func _restart() -> void:
+	restart_pressed.emit()
+	if self == get_tree().current_scene:
+		get_tree().reload_current_scene()
+
+
+func _pause() -> void:
+	%AbilitiesContainer.visible = false
+	%Pause.visible = true
+	paused = true
+
+
+func _resume() -> void:
+	%AbilitiesContainer.visible = true
+	%Pause.visible = false
+	paused = false

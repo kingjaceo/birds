@@ -12,6 +12,7 @@ metadata/_custom_type_script = "uid://c4oi5vavfuf8k"
 [resource]
 script = ExtResource("4_2bdes")
 name = "Flash"
+icon = ExtResource("3_igdoa")
 range = ExtResource("3_igdoa")
 area = ExtResource("1_e8rbd")
 effect = SubResource("Resource_px0f0")

@@ -2,16 +2,45 @@
 	a. better animations
 	b. spells start at the first tile on their path rather than on top of the character
 	c. sound effects
+	d. clearer player turn telegraphing: now it's time to play abilities, now it's time to discard, etc
 
 2. Abilities:
 	b. Basic Healing
 	c. Basic Melee
+	d. design the existing placeholders
 
 5. Game Design:
 	a. A Party has a collection of abilities. On your turn, you can play one ability.
 	   That ability is in the discard pile, and won't come back until you skip a turn
-	   aftere which you get all abilities back except one.
-	b. After your turn, the enemy takes a turn!
+	   after which you get all abilities back except one.
+	b. or: you play ALL; or: up to X out of Y
+	c. After your turn, the enemy takes a turn!
+	d. You DON'T fight: instead you are accumulating resources against a BIG CLOCK:
+		- collect "Clues", "Feathers", "Cloaks", "Bottled Wind", "Materials", "Supplies"
+		- destroy Barriers
+		- unlock Doors/Chests
+		- clear Fog, Traps, etc
+		- the Clock is a simple timer: every thing takes time, including the turns on each "level"
+		  as the clock passes certain thresholds, certain events happen (good and bad)
+		  but the game always gets a little harder, and you will inevitably lose
+		- The Roost is the main base and can be upgraded
+		- The game campaign starts with the following scene:
+			A Flock of Elder Birds brings 3 cloaks to the feet of the High Cardinal
+			The Flock Leaves
+			The High Cardinal explains that "you"ve been recuirted to become a bird
+			You'll be given a cloak, which will imbue you with powerful abilities
+			But to become more powerful you'll have to collect feathers
+			BUT, The High Cardinal Warns: our world is in ruin and our Great Flock is crumbling
+			Do you agree to take on this mantle?
+			Then go scour the woods for clues, feathers, and materials for the Roost.
+		- You discover Cloaks as you go to expand/upgrade your party, and feathers to upgrade
+		- You discover a world falling apart at the very seams, fracturing and decaying
+		- and even killing your party members
+		- Some upgrades are PERMANENT, making future runs easier and easier
+		- Some upgrades are UNTIL DEATH, making the rest of the run easier
+		- AND "Wizard Duel", another game mode in which you play "against" a computer casting spells
+		- Clock COULD BE a false indicator of progress and there's a hidden record of "destruction"
+		  which leads to a more chaotic world
 
 6. Bird Types:
 	- Gray: chicklings, very basic abilities, choose 3 of 4
@@ -20,3 +49,26 @@
 	- Red: ranged, AoE, choose 4 of 5
 	- Brown: high melee, move and attack, attack around, choose 4 of 5
 	- Black: rule-breakers, stun + additional ability, mass stun, move allies, choose 4 of 5
+	- Multicolor? Woodpecker (red and black)
+
+7. Prototype Ideas:
+	- real-time pausable: play abilities in succession as enemies take their turns
+	- turn-based: see Game Design above	
+
+8. Game Flow:
+	- main menu: can choose "battle now!", "draft and battle", "campaign", "options", 
+
+9. Architecture:
+	- design a data system: a CSV with all relevant card data for easy card creation
+	- TurnManager StateMachine: loop over children, await their turn to finish
+
+10. Demo:
+	a. "Play now" plays with the 3 "Level 2" characters and a simple mission
+	b. "Draft" mode: the Player can choose from 4 Characters and 3 missions to play
+	c. "Campaign" mode: hover text "in development"
+
+11. Mechanics:
+	a. "Stun/Caw": player can give stun to prevent CPU enemy from moving 
+	b. "Caw": skips next turn
+	c. "Brush": low health, widespread
+	d. "Wooden Walls": high health

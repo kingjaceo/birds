@@ -2,7 +2,7 @@ class_name Character
 extends Node2D
 
 @export var max_health: int = 5
-var health: int = max_health:
+@onready var health: int = max_health:
 	set(value):
 		health = clampi(value, 0, max_health)
 		%Healthbar.value = health
@@ -10,10 +10,15 @@ var health: int = max_health:
 var selected := false
 var dead := false
 
+signal died
+signal respawned
+
+
 func _ready():
-	%Healthbar.max_value = health
-	%Healthbar.value = health
-	
+	for ability in abilities:
+		ability.character = self
+	%Healthbar.max_value = max_health
+	%Healthbar.value = max_health
 
 
 func damage(amount: int):
@@ -24,13 +29,16 @@ func damage(amount: int):
 
 func heal(amount: int):
 	health += amount
-	dead = false
+	if dead:
+		dead = false
+		respawned.emit()
 	visible = true
 
 
 func die():
 	dead = true
 	visible = false
+	died.emit()
 
 
 

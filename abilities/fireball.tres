@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Ability" format=3 uid="uid://chw6mou7rnnia"]
 
 [ext_resource type="Texture2D" uid="uid://otrut6j5qxuq" path="res://abilities/fireball_area.png" id="1_bddhf"]
-[ext_resource type="PackedScene" uid="uid://c872yg5pgj3c8" path="res://abilities/fireball.tscn" id="2_dbc05"]
+[ext_resource type="PackedScene" uid="uid://c872yg5pgj3c8" path="res://abilities/effect_animation.tscn" id="2_dbc05"]
 [ext_resource type="Script" uid="uid://c0c2sx0iqiaeb" path="res://abilities/damage_effect.gd" id="2_y8mr0"]
 [ext_resource type="Texture2D" uid="uid://cbttwgc6j0ae0" path="res://abilities/fireball_range.png" id="3_dbc05"]
 [ext_resource type="Script" uid="uid://dikcdb061vg3x" path="res://abilities/ability.gd" id="4_u282u"]
@@ -9,11 +9,13 @@
 [sub_resource type="Resource" id="Resource_psfy4"]
 script = ExtResource("2_y8mr0")
 animation_scene = ExtResource("2_dbc05")
+reverse_speed = null
 metadata/_custom_type_script = "uid://c0c2sx0iqiaeb"
 
 [resource]
 script = ExtResource("4_u282u")
 name = "Fireball"
+icon = ExtResource("1_bddhf")
 range = ExtResource("3_dbc05")
 area = ExtResource("1_bddhf")
 effect = SubResource("Resource_psfy4")

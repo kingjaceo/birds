@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://b276cbx4p31a4"]
+
+[ext_resource type="Script" uid="uid://dikcdb061vg3x" path="res://abilities/ability.gd" id="1_l8tgm"]
+
+[resource]
+script = ExtResource("1_l8tgm")
+name = "Disable"
+metadata/_custom_type_script = "uid://dikcdb061vg3x"
