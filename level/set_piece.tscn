@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://rqmld68dlqs7"]
+
+[ext_resource type="Script" uid="uid://bh202m3xlostl" path="res://level/set_piece.gd" id="1_3t4kl"]
+[ext_resource type="Texture2D" uid="uid://dc7tt2pkof473" path="res://level/tilesheets/Outdoor_Decor.png" id="1_glet0"]
+
+[node name="SetPiece" type="Node2D" unique_id=1313586226]
+texture_filter = 1
+script = ExtResource("1_3t4kl")
+item_type = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=896377215]
+texture = ExtResource("1_glet0")
+region_enabled = true
+region_rect = Rect2(48, 144, 16, 16)

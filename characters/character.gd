@@ -15,6 +15,7 @@ signal respawned
 
 
 func _ready():
+	Battlefield.register_character(self)
 	for ability in abilities:
 		ability.character = self
 	%Healthbar.max_value = max_health

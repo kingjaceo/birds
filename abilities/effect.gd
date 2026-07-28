@@ -8,6 +8,7 @@ var _caster_coord: Vector2i
 var _target_coords: Array[Vector2i]
 var _targets: Array[Node2D]
 
+
 func _description():
 	return "N/A"
 
