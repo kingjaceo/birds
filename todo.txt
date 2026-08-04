@@ -41,6 +41,7 @@
 		- AND "Wizard Duel", another game mode in which you play "against" a computer casting spells
 		- Clock COULD BE a false indicator of progress and there's a hidden record of "destruction"
 		  which leads to a more chaotic world
+		- 
 
 6. Bird Types:
 	- Gray: chicklings, very basic abilities, choose 3 of 4
@@ -50,6 +51,8 @@
 	- Brown: high melee, move and attack, attack around, choose 4 of 5
 	- Black: rule-breakers, stun + additional ability, mass stun, move allies, choose 4 of 5
 	- Multicolor? Woodpecker (red and black)
+	- OR: Black: unlock, swap locations, etc; Brown: Reveal, Move Far/Fast, etc;
+	      White: Buff; Blue: Search, Gather; Red: AOE
 
 7. Prototype Ideas:
 	- real-time pausable: play abilities in succession as enemies take their turns
@@ -72,3 +75,5 @@
 	b. "Caw": skips next turn
 	c. "Brush": low health, widespread
 	d. "Wooden Walls": high health
+	e. Discover Clues/Feathers/Cloaks in Books/Bookshelves, Chests, Cabinets
+	f. Traverse territory quickly?

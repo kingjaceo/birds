@@ -20,7 +20,6 @@ func target_at(coord):
 
 
 func find_nearest_clear_cell(coord: Vector2i):
-	var next_cell := coord
 	var current_radius := 0
 	var max_radius := 10
 	while current_radius <= max_radius:
