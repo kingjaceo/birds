@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://co51i1avqx0tb"]
+
+[ext_resource type="PackedScene" uid="uid://fjikf1c1m8pw" path="res://characters/character_sprite.tscn" id="1_mhkdk"]
+[ext_resource type="Texture2D" uid="uid://2k5q5vh8ppt3" path="res://characters/feet/yellow.png" id="2_10g0h"]
+[ext_resource type="Texture2D" uid="uid://26enuxgvyfgl" path="res://characters/cloaks/blackbird.png" id="3_ardl3"]
+
+[sub_resource type="Gradient" id="Gradient_mhkdk"]
+offsets = PackedFloat32Array(0.19827586, 1)
+colors = PackedColorArray(0.08370573, 0.0850239, 0.08502398, 1, 0.13333334, 0.1254902, 0.20392157, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_10g0h"]
+gradient = SubResource("Gradient_mhkdk")
+
+[node name="CharacterSprite" unique_id=1136409777 instance=ExtResource("1_mhkdk")]
+
+[node name="Feet" parent="." index="3" unique_id=1161577340]
+texture = ExtResource("2_10g0h")
+
+[node name="FaceTexture" parent="." index="4" unique_id=1467663188]
+texture = SubResource("GradientTexture1D_10g0h")
+
+[node name="Cloak" parent="." index="5" unique_id=796088224]
+texture = ExtResource("3_ardl3")

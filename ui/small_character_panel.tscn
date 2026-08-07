@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://b2fracf66n1f"]
+
+[ext_resource type="Script" uid="uid://wb0w3rjn32lf" path="res://ui/small_character_panel.gd" id="1_hcf4g"]
+[ext_resource type="Texture2D" uid="uid://cqmdi6tg2xh7q" path="res://characters/icons/cardinal_icon.png" id="1_mn1gs"]
+[ext_resource type="PackedScene" uid="uid://cjsyk51uhiwar" path="res://abilities/ability_panel.tscn" id="2_hcf4g"]
+
+[node name="CharacterPanel" type="HBoxContainer" unique_id=815556558]
+mouse_filter = 0
+theme_override_constants/separation = 8
+script = ExtResource("1_hcf4g")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=449238650]
+unique_name_in_owner = true
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_mn1gs")
+stretch_mode = 4
+
+[node name="Abilities" type="HBoxContainer" parent="." unique_id=1942758745]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Ability" parent="Abilities" unique_id=570765639 instance=ExtResource("2_hcf4g")]
+layout_mode = 2
+
+[node name="Ability2" parent="Abilities" unique_id=1276744031 instance=ExtResource("2_hcf4g")]
+layout_mode = 2
+
+[node name="Ability3" parent="Abilities" unique_id=1743416992 instance=ExtResource("2_hcf4g")]
+layout_mode = 2
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

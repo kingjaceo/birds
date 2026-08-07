@@ -77,3 +77,15 @@
 	d. "Wooden Walls": high health
 	e. Discover Clues/Feathers/Cloaks in Books/Bookshelves, Chests, Cabinets
 	f. Traverse territory quickly?
+	g. "Land" comes and goes according to Map effects and character abilities:
+		a red countdown timer on every tile shows how long until a tile disappears
+		a green countdown timer on empty tiles shows how long until a tile appears
+		characters can increase/decrease timers, move themselves, teleport allies
+		instantly destroy or spawn land
+		birds have "stamina" which determines how long they can spend off ground
+		recharges instantly upon landing
+		some cards can restore stamina
+		others may cost stamina
+	h. on level load, the player should be prompted to place the party in legal
+	   "starting spaces" (level tilemaplayer?)
+	   "placing pieces" is one of the LevelStates

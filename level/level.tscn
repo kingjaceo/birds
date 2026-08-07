@@ -3,19 +3,19 @@
 [ext_resource type="Script" uid="uid://b7a024sr6krag" path="res://level/level.gd" id="1_oi3di"]
 [ext_resource type="Texture2D" uid="uid://c703heyg3j4cy" path="res://level/tilemap.png" id="1_u52ul"]
 [ext_resource type="Script" uid="uid://57ccn2d122f8" path="res://level/turn_manager.gd" id="2_4c15r"]
+[ext_resource type="Script" uid="uid://bgfddcty1llfm" path="res://characters/character_data.gd" id="2_lsj08"]
 [ext_resource type="Texture2D" uid="uid://c87udhpy2l8af" path="res://level/tilesheets/Grass_Tiles_1.png" id="3_42xju"]
 [ext_resource type="Script" uid="uid://crv25hnws5k2g" path="res://level/battlefield_layer.gd" id="3_km5ld"]
+[ext_resource type="Resource" uid="uid://dsriyfo7tky2u" path="res://characters/blackbird.tres" id="3_u5n7q"]
 [ext_resource type="Script" uid="uid://cm8pja27b0mmv" path="res://ui/input_state_machine.gd" id="4_0b4ue"]
 [ext_resource type="Script" uid="uid://r318gnyhdt7y" path="res://characters/characters.gd" id="4_f2txt"]
+[ext_resource type="Resource" uid="uid://b8r2ple6jm11q" path="res://characters/cardinal.tres" id="4_qslh7"]
 [ext_resource type="Texture2D" uid="uid://e0c0gm6ik0y8" path="res://level/tilesheets/Grass_1_Middle.png" id="4_v7sqt"]
 [ext_resource type="Texture2D" uid="uid://dksccqjb5ai4y" path="res://level/tilesheets/House_Wood.png" id="5_ilwjd"]
 [ext_resource type="Script" uid="uid://clli0knres4d7" path="res://abilities/ability_manager.gd" id="6_1ainy"]
-[ext_resource type="PackedScene" uid="uid://hr5oa44hepe3" path="res://characters/cardinal.tscn" id="6_i2t4f"]
 [ext_resource type="Texture2D" uid="uid://i8ta4rmfj26" path="res://level/tilesheets/Wood_Floor_1.png" id="6_y3bce"]
-[ext_resource type="PackedScene" uid="uid://bdmkns6600p1" path="res://characters/blackbird.tscn" id="7_8cye3"]
 [ext_resource type="Texture2D" uid="uid://c7q7nmanx0eqv" path="res://level/tilesheets/Nests.png" id="7_fj6e6"]
 [ext_resource type="Texture2D" uid="uid://dc7tt2pkof473" path="res://level/tilesheets/Outdoor_Decor.png" id="8_2h3vt"]
-[ext_resource type="PackedScene" uid="uid://bod4t8r7pg2o7" path="res://characters/bluejay.tscn" id="8_aicyk"]
 [ext_resource type="Script" uid="uid://emnbdc3knqkj" path="res://level/player_controller.gd" id="9_fedht"]
 [ext_resource type="TileSet" uid="uid://bloat0ktwyaxo" path="res://level/ability_display.tres" id="9_i2t4f"]
 [ext_resource type="Script" uid="uid://7vhn1nucws6c" path="res://level/camera_controller.gd" id="9_y3bce"]
@@ -817,6 +817,7 @@ sources/8 = SubResource("TileSetScenesCollectionSource_aoqsc")
 
 [node name="Level" type="Node2D" unique_id=429406685]
 script = ExtResource("1_oi3di")
+characters = Array[ExtResource("2_lsj08")]([ExtResource("3_u5n7q"), ExtResource("4_qslh7")])
 
 [node name="Battlefield" type="Node2D" parent="." unique_id=538848069]
 
@@ -863,15 +864,6 @@ script = ExtResource("4_0b4ue")
 [node name="Characters" type="Node2D" parent="." unique_id=1415725410]
 unique_name_in_owner = true
 script = ExtResource("4_f2txt")
-
-[node name="Cardinal" parent="Characters" unique_id=2006223497 instance=ExtResource("6_i2t4f")]
-position = Vector2(8, 56)
-
-[node name="Blackbird" parent="Characters" unique_id=774932245 instance=ExtResource("7_8cye3")]
-position = Vector2(-24, 56)
-
-[node name="Bluejay" parent="Characters" unique_id=852796249 instance=ExtResource("8_aicyk")]
-position = Vector2(-8, 56)
 
 [node name="TurnManager" type="Node2D" parent="." unique_id=1900507256]
 script = ExtResource("2_4c15r")

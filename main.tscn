@@ -81,10 +81,11 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "credits"
 
-[node name="Button6" type="Button" parent="MainMenu/PanelContainer/MarginContainer/VBoxContainer" unique_id=2080060510]
+[node name="Quit" type="Button" parent="MainMenu/PanelContainer/MarginContainer/VBoxContainer" unique_id=2080060510]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "quit"
 
 [connection signal="pressed" from="MainMenu/PanelContainer/MarginContainer/VBoxContainer/Quickplay" to="." method="_quickplay"]
-[connection signal="pressed" from="MainMenu/PanelContainer/MarginContainer/VBoxContainer/Button6" to="." method="_quit"]
+[connection signal="pressed" from="MainMenu/PanelContainer/MarginContainer/VBoxContainer/DraftAndPlay" to="." method="_load_roost"]
+[connection signal="pressed" from="MainMenu/PanelContainer/MarginContainer/VBoxContainer/Quit" to="." method="_quit"]

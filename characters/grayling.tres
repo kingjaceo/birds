@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://wxiy7lx57tce"]
+
+[ext_resource type="Script" uid="uid://dikcdb061vg3x" path="res://abilities/ability.gd" id="1_4gxxq"]
+[ext_resource type="Resource" uid="uid://cmapx8alknvu8" path="res://abilities/flap.tres" id="2_4snln"]
+[ext_resource type="Script" uid="uid://bgfddcty1llfm" path="res://characters/character_data.gd" id="2_ium6w"]
+[ext_resource type="Resource" uid="uid://dtaa8q4lnux1k" path="res://abilities/peck.tres" id="3_qjqg7"]
+[ext_resource type="Texture2D" uid="uid://dw24515kdgb01" path="res://characters/icons/graybird.png" id="4_i3hn7"]
+[ext_resource type="PackedScene" uid="uid://dsjgkgedj6yt4" path="res://characters/grayling_sprite.tscn" id="6_qjqg7"]
+
+[resource]
+script = ExtResource("2_ium6w")
+max_health = 1
+icon = ExtResource("4_i3hn7")
+abilities = Array[ExtResource("1_4gxxq")]([ExtResource("2_4snln"), ExtResource("3_qjqg7")])
+sprite = ExtResource("6_qjqg7")
+metadata/_custom_type_script = "uid://bgfddcty1llfm"

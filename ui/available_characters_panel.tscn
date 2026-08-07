@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ohq8b5yq7x6d"]
+
+[node name="AvailableCharacters" type="VBoxContainer" unique_id=220874729]
+offset_left = 282.0
+offset_top = 154.0
+offset_right = 550.0
+offset_bottom = 245.0
+
+[node name="Label" type="Label" parent="." unique_id=566395958]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Available Characters"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1960424103]
+unique_name_in_owner = true
+layout_mode = 2

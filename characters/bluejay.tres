@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://dohpyhmynwr78"]
+
+[ext_resource type="Script" uid="uid://dikcdb061vg3x" path="res://abilities/ability.gd" id="1_w577l"]
+[ext_resource type="Resource" uid="uid://ci44oesf6di2s" path="res://abilities/encore.tres" id="2_br0t8"]
+[ext_resource type="Script" uid="uid://bgfddcty1llfm" path="res://characters/character_data.gd" id="2_co8yy"]
+[ext_resource type="Resource" uid="uid://b276cbx4p31a4" path="res://abilities/disable.tres" id="3_76f2d"]
+[ext_resource type="Resource" uid="uid://ctitv8daq4pw1" path="res://abilities/recover.tres" id="4_pqsto"]
+[ext_resource type="Texture2D" uid="uid://defg0juxmiuq2" path="res://characters/icons/bluebird_icon.png" id="5_e4le4"]
+[ext_resource type="PackedScene" uid="uid://c4kwxykduvsbi" path="res://characters/bluejay_sprite.tscn" id="7_76f2d"]
+
+[resource]
+script = ExtResource("2_co8yy")
+max_health = 2
+icon = ExtResource("5_e4le4")
+abilities = Array[ExtResource("1_w577l")]([ExtResource("2_br0t8"), ExtResource("3_76f2d"), ExtResource("4_pqsto")])
+sprite = ExtResource("7_76f2d")
+metadata/_custom_type_script = "uid://bgfddcty1llfm"

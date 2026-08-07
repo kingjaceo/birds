@@ -2,11 +2,12 @@ class_name Character
 extends Node2D
 
 @export var max_health: int = 5
-@onready var health: int = max_health:
+var health: int:
 	set(value):
-		health = clampi(value, 0, max_health)
+		health = clampi(value, 0, data.max_health)
 		%Healthbar.value = health
 @export var abilities: Array[Ability]
+var data: CharacterData
 var selected := false
 var dead := false
 
@@ -15,11 +16,13 @@ signal respawned
 
 
 func _ready():
+	$Sprite2D.texture = data.icon
+	health = data.max_health
 	Battlefield.register_character(self)
-	for ability in abilities:
+	for ability in data.abilities:
 		ability.character = self
-	%Healthbar.max_value = max_health
-	%Healthbar.value = max_health
+	%Healthbar.max_value = data.max_health
+	%Healthbar.value = data.max_health
 
 
 func damage(amount: int):

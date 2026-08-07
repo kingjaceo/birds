@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://b8r2ple6jm11q"]
+
+[ext_resource type="Script" uid="uid://dikcdb061vg3x" path="res://abilities/ability.gd" id="1_sx7h7"]
+[ext_resource type="Resource" uid="uid://b75sxoc4fygd5" path="res://abilities/flash.tres" id="2_rg6dk"]
+[ext_resource type="Script" uid="uid://bgfddcty1llfm" path="res://characters/character_data.gd" id="2_y4uyr"]
+[ext_resource type="Resource" uid="uid://chw6mou7rnnia" path="res://abilities/fireball.tres" id="3_04qa8"]
+[ext_resource type="Resource" uid="uid://qbrnh0yfyvwx" path="res://abilities/firestorm.tres" id="4_ivmag"]
+[ext_resource type="Texture2D" uid="uid://cqmdi6tg2xh7q" path="res://characters/icons/cardinal_icon.png" id="5_c7qry"]
+
+[resource]
+script = ExtResource("2_y4uyr")
+max_health = 4
+icon = ExtResource("5_c7qry")
+abilities = Array[ExtResource("1_sx7h7")]([ExtResource("2_rg6dk"), ExtResource("3_04qa8"), ExtResource("4_ivmag")])
+metadata/_custom_type_script = "uid://bgfddcty1llfm"

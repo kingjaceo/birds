@@ -1,13 +1,17 @@
 extends Node2D
 
-#signal character_died(character: Character)
-#signal character_respawned(character: Character)
+var character_scene := load("res://characters/character.tscn")
 
 
-func _ready() -> void:
-	for character: Character in get_children():
-		var character_coords = %Main.local_to_map(character.position)
-		character.position = %Main.map_to_local(character_coords)
-		#character.died.connect(character_died.emit.bind(character))
-		#character.died.connect(_on_character_death.bind(character))
-		#character.respawned.connect(character_respawned.emit.bind(character))
+#func _ready() -> void:
+	#for character: Character in get_children():
+		#var character_coords = %Main.local_to_map(character.position)
+		#character.position = %Main.map_to_local(character_coords)
+
+
+func setup(characters: Array[CharacterData]):
+	for character in characters:
+		var new_character = character_scene.instantiate()
+		new_character.data = character
+		new_character.position = %Main.map_to_local(Vector2i(randi_range(0, 10), randi_range(0, 10)))
+		add_child(new_character)

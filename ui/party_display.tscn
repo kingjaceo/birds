@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bw3so6qjcrb6a"]
+
+[ext_resource type="Script" uid="uid://dkcmypyj35csw" path="res://ui/party_display_panel.gd" id="1_j3c0r"]
+
+[node name="PartyDisplay" type="PanelContainer" unique_id=113644900]
+custom_minimum_size = Vector2(600, 150)
+custom_maximum_size = Vector2(-1, 600)
+clip_contents = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -75.0
+offset_right = 300.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j3c0r")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=682887419]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer" unique_id=1465427842]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer" unique_id=1685659452]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1436327281]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Party"
+horizontal_alignment = 1
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

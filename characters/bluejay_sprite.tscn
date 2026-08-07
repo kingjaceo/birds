@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c4kwxykduvsbi"]
+
+[ext_resource type="PackedScene" uid="uid://fjikf1c1m8pw" path="res://characters/character_sprite.tscn" id="1_rwkwn"]
+[ext_resource type="Texture2D" uid="uid://ti1nmx5yrojb" path="res://characters/cloaks/bluejay.png" id="2_x3dvq"]
+
+[sub_resource type="Gradient" id="Gradient_rwkwn"]
+offsets = PackedFloat32Array(0.19827586, 1)
+colors = PackedColorArray(0.08370573, 0.0850239, 0.08502398, 1, 0.35686275, 0.43137255, 0.88235295, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_x3dvq"]
+gradient = SubResource("Gradient_rwkwn")
+
+[node name="CharacterSprite" unique_id=1136409777 instance=ExtResource("1_rwkwn")]
+
+[node name="FaceTexture" parent="." index="2" unique_id=1467663188]
+texture = SubResource("GradientTexture1D_x3dvq")
+
+[node name="Cloak" parent="." index="5" unique_id=796088224]
+texture = ExtResource("2_x3dvq")

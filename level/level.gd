@@ -2,7 +2,7 @@ class_name Level
 extends Node2D
 
 var paused: bool = false
-
+@export var characters: Array[CharacterData]
 signal quit_level_pressed
 signal quit_game_pressed
 signal restart_pressed
@@ -10,7 +10,7 @@ signal restart_pressed
 
 func _ready():
 	%MainTrack.play()
-	_setup()
+	%Characters.setup(characters)
 
 
 func _setup():

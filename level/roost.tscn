@@ -2,6 +2,14 @@
 
 [ext_resource type="Script" uid="uid://bjh5cl1q7ropj" path="res://level/roost.gd" id="1_iq5qx"]
 [ext_resource type="PackedScene" uid="uid://bt23pav4fsup6" path="res://ui/character_display_container.tscn" id="2_4etq4"]
+[ext_resource type="Script" uid="uid://bgfddcty1llfm" path="res://characters/character_data.gd" id="2_soqsu"]
+[ext_resource type="Resource" uid="uid://wxiy7lx57tce" path="res://characters/grayling.tres" id="3_0vds8"]
+[ext_resource type="Resource" uid="uid://b8r2ple6jm11q" path="res://characters/cardinal.tres" id="4_5414p"]
+[ext_resource type="PackedScene" uid="uid://bw3so6qjcrb6a" path="res://ui/party_display.tscn" id="4_msfhs"]
+[ext_resource type="Resource" uid="uid://dohpyhmynwr78" path="res://characters/bluejay.tres" id="5_10e5a"]
+[ext_resource type="Resource" uid="uid://dsriyfo7tky2u" path="res://characters/blackbird.tres" id="6_t7c64"]
+[ext_resource type="PackedScene" uid="uid://ohq8b5yq7x6d" path="res://ui/available_characters_panel.tscn" id="7_0vds8"]
+[ext_resource type="Script" uid="uid://xslceae11dn5" path="res://ui/available_characters_panel.gd" id="8_5414p"]
 
 [sub_resource type="Gradient" id="Gradient_mrfam"]
 colors = PackedColorArray(1, 0, 0, 1, 0.47843137, 0, 0, 1)
@@ -12,6 +20,7 @@ fill_to = Vector2(0.5784615, 0.4953846)
 
 [node name="Roost" type="Node2D" unique_id=1555386337]
 script = ExtResource("1_iq5qx")
+characters = Array[ExtResource("2_soqsu")]([ExtResource("3_0vds8"), ExtResource("4_5414p"), ExtResource("5_10e5a"), ExtResource("6_t7c64")])
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=262344763]
 
@@ -23,82 +32,98 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_86c08")
 
-[node name="AvailableCharacters" type="GridContainer" parent="CanvasLayer" unique_id=1562787103]
-offset_left = 240.0
-offset_top = 152.0
-offset_right = 280.0
-offset_bottom = 192.0
-columns = 3
-
-[node name="Button" type="Button" parent="CanvasLayer/AvailableCharacters" unique_id=1726459151]
-layout_mode = 2
-text = "a"
-
-[node name="Button2" type="Button" parent="CanvasLayer/AvailableCharacters" unique_id=1954678505]
-layout_mode = 2
-text = "b"
-
-[node name="Button3" type="Button" parent="CanvasLayer/AvailableCharacters" unique_id=725125165]
-layout_mode = 2
-text = "c"
-
-[node name="Button4" type="Button" parent="CanvasLayer/AvailableCharacters" unique_id=1531621854]
-layout_mode = 2
-text = "d"
-
-[node name="Button5" type="Button" parent="CanvasLayer/AvailableCharacters" unique_id=1805065177]
-layout_mode = 2
-text = "e"
+[node name="AvailableCharacters" parent="CanvasLayer" unique_id=220874729 instance=ExtResource("7_0vds8")]
+unique_name_in_owner = true
+script = ExtResource("8_5414p")
 
 [node name="CharacterDisplayContainer" parent="CanvasLayer" unique_id=1709111383 instance=ExtResource("2_4etq4")]
 unique_name_in_owner = true
-anchors_preset = 2
-anchor_left = 0.0
-anchor_top = 1.0
-anchor_right = 0.0
-anchor_bottom = 1.0
-offset_left = 196.0
-offset_top = 81.0
-offset_right = 196.0
-offset_bottom = 81.0
+anchors_preset = -1
+anchor_left = 0.44500002
+anchor_top = 0.78300005
+anchor_right = 0.44500002
+anchor_bottom = 0.78300005
+offset_left = -835.4
+offset_top = -227.64008
+offset_right = -33.400024
+offset_bottom = 200.35992
 grow_horizontal = 1
 grow_vertical = 0
 
-[node name="PartyContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=807932979]
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -160.0
-offset_top = -50.5
-offset_right = -120.0
-offset_bottom = 50.5
-grow_horizontal = 0
-grow_vertical = 2
+[node name="PartyDisplay" parent="CanvasLayer" unique_id=113644900 instance=ExtResource("4_msfhs")]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_left = 0.952
+anchor_top = 0.767
+anchor_right = 0.952
+anchor_bottom = 0.767
+offset_left = -551.8401
+offset_top = -789.36005
+offset_right = 48.159912
+offset_bottom = -241.36005
 
-[node name="Button" type="Button" parent="CanvasLayer/PartyContainer" unique_id=1494250746]
-layout_mode = 2
-text = "a"
+[node name="CharacterDisplayContainer2" parent="CanvasLayer" unique_id=1003525898 instance=ExtResource("2_4etq4")]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_top = 0.76500005
+anchor_bottom = 0.76500005
+offset_left = 110.0
+offset_top = -214.20007
+offset_right = 912.0
+offset_bottom = 213.79993
 
-[node name="Button2" type="Button" parent="CanvasLayer/PartyContainer" unique_id=1395236718]
-layout_mode = 2
-text = "a"
+[node name="Enlist" type="Button" parent="CanvasLayer" unique_id=856303264]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_left = 0.446
+anchor_top = 0.781
+anchor_right = 0.446
+anchor_bottom = 0.781
+offset_left = 9.679993
+offset_top = -12.4800415
+offset_right = 60.679993
+offset_bottom = 18.519958
+text = "enlist"
 
-[node name="Button3" type="Button" parent="CanvasLayer/PartyContainer" unique_id=429944186]
-layout_mode = 2
-text = "a"
-
-[node name="Button" type="Button" parent="CanvasLayer" unique_id=551243286]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -128.0
-offset_top = -119.0
-offset_right = -96.0
-offset_bottom = -88.0
+[node name="Go" type="Button" parent="CanvasLayer" unique_id=551243286]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_left = 0.94600004
+anchor_top = 0.76900005
+anchor_right = 0.94600004
+anchor_bottom = 0.76900005
+offset_left = -977.32007
+offset_top = -744.5201
+offset_right = -877.32007
+offset_bottom = -648.5201
 grow_horizontal = 0
 grow_vertical = 0
+theme_override_font_sizes/font_size = 64
 text = "go!"
+
+[node name="Remove" type="Button" parent="CanvasLayer" unique_id=172336443]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_left = 0.94400007
+anchor_top = 0.768
+anchor_right = 0.94400007
+anchor_bottom = 0.768
+offset_left = -837.4801
+offset_top = 0.55999756
+offset_right = -770.4801
+offset_bottom = 31.559998
+grow_horizontal = 0
+grow_vertical = 0
+text = "remove"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=2068946530]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="character_selected" from="CanvasLayer/AvailableCharacters" to="." method="_update_character_display"]
+[connection signal="character_removed" from="CanvasLayer/PartyDisplay" to="." method="_on_character_removed_from_party"]
+[connection signal="character_selected" from="CanvasLayer/PartyDisplay" to="CanvasLayer/CharacterDisplayContainer2" method="_on_character_selected"]
+[connection signal="pressed" from="CanvasLayer/Enlist" to="." method="_on_enlist_pressed"]
+[connection signal="pressed" from="CanvasLayer/Go" to="." method="_on_go_pressed"]
+[connection signal="pressed" from="CanvasLayer/Remove" to="." method="_on_remove_pressed"]
+[connection signal="pressed" from="CanvasLayer/Remove" to="CanvasLayer/CharacterDisplayContainer2" method="clear"]

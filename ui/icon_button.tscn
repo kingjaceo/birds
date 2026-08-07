@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cu0cwpmhc10t0"]
+
+[ext_resource type="Script" uid="uid://kjupnoilakj2" path="res://ui/icon_button.gd" id="1_0dbtw"]
+[ext_resource type="Texture2D" uid="uid://cqmdi6tg2xh7q" path="res://characters/icons/cardinal_icon.png" id="1_uuhsw"]
+
+[node name="IconButton" type="PanelContainer" unique_id=972968824]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+custom_maximum_size = Vector2(64, 64)
+offset_right = 64.0
+offset_bottom = 64.0
+script = ExtResource("1_0dbtw")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1093784262]
+layout_mode = 2
+texture = ExtResource("1_uuhsw")
+stretch_mode = 4
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

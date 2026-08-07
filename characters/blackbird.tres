@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://dsriyfo7tky2u"]
+
+[ext_resource type="Script" uid="uid://dikcdb061vg3x" path="res://abilities/ability.gd" id="1_0vebb"]
+[ext_resource type="Script" uid="uid://bgfddcty1llfm" path="res://characters/character_data.gd" id="2_7uo2u"]
+[ext_resource type="Resource" uid="uid://bfucj2qycm74q" path="res://abilities/dart.tres" id="2_hrff3"]
+[ext_resource type="Resource" uid="uid://bpfgfyjqsksvd" path="res://abilities/crackle.tres" id="3_6uxrj"]
+[ext_resource type="Texture2D" uid="uid://d10iotqa0t1jp" path="res://characters/icons/blackbird.png" id="4_ljrtg"]
+[ext_resource type="PackedScene" uid="uid://co51i1avqx0tb" path="res://characters/blackbird_sprite.tscn" id="6_6uxrj"]
+
+[resource]
+script = ExtResource("2_7uo2u")
+max_health = 6
+icon = ExtResource("4_ljrtg")
+abilities = Array[ExtResource("1_0vebb")]([ExtResource("2_hrff3"), ExtResource("3_6uxrj")])
+sprite = ExtResource("6_6uxrj")
+metadata/_custom_type_script = "uid://bgfddcty1llfm"
